@@ -95,7 +95,7 @@
         <!--Swipe View Controller-->
         <scene sceneID="0IC-g2-DYS">
             <objects>
-                <viewController id="txo-12-tPs" customClass="SwipeViewController" customModule="Tindogs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="swipeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="txo-12-tPs" customClass="SwipeViewController" customModule="Tindogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BdL-Lt-NkZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,6 +244,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.91764705882352937" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="8aS-40-kd2" firstAttribute="top" secondItem="N2C-s2-lXZ" secondAttribute="bottom" id="3Fc-ah-puY"/>
                             <constraint firstItem="ubR-NK-glh" firstAttribute="trailing" secondItem="N2C-s2-lXZ" secondAttribute="trailing" id="9V3-AE-s8X"/>
@@ -261,13 +262,28 @@
                             <constraint firstItem="ctU-t0-CK5" firstAttribute="leading" secondItem="BdL-Lt-NkZ" secondAttribute="leading" id="uGA-zr-21X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ubR-NK-glh"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="f7P-yL-YQl" appends="YES" id="BhN-TB-pKb"/>
+                            <outletCollection property="gestureRecognizers" destination="RXt-Sn-TRq" appends="YES" id="diu-m3-5Na"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="3qt-G0-ruW"/>
                     <connections>
                         <outlet property="tableView" destination="N2C-s2-lXZ" id="RCC-5e-b2b"/>
+                        <segue destination="WB1-72-vrk" kind="custom" id="8yn-NM-3Yp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5w1-i5-6Qx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="RXt-Sn-TRq">
+                    <connections>
+                        <action selector="swipeLeft:" destination="txo-12-tPs" id="yPe-vJ-luQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="f7P-yL-YQl">
+                    <connections>
+                        <action selector="swipeRight:" destination="txo-12-tPs" id="Wwk-IR-iU0"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1189.8550724637682" y="-222.32142857142856"/>
         </scene>

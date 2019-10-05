@@ -10,6 +10,11 @@ import UIKit
 
 class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+//    var commonSegue: UIStoryboardSegue {
+//        
+//    }
+//    
+    
     @IBOutlet weak var tableView: UITableView!
     let simpleFakeDataSourcePetFriendly: Bool = true
     let simpleFakeDataSourceBreed: String = "Labrador"
@@ -31,6 +36,17 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
         switch indexPath.row {
         case 4:
             return 350.0
+        case 2:
+            if simpleFakeDataSourcePetFriendly {
+                return 43.5
+            }
+            return 0
+            
+        case 3:
+            if simpleFakeDataSourceFamilyFriendly {
+                return 43.5
+            }
+            return 0
         default:
             return 43.5
         }
@@ -40,7 +56,6 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
         var cell: UITableViewCell
         switch indexPath.row {
         case 0:
-            print("hello")
             cell = UITableViewCell(style: .default, reuseIdentifier: SwipeViewController.defaultCell)
             cell.textLabel?.text = "Breed: \(simpleFakeDataSourceBreed)"
         case 1:
@@ -60,7 +75,6 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
             customDataCell.textContent.text = simpleFakeDataSourceBio
             customDataCell.textContent.textColor = #colorLiteral(red: 0.8269874454, green: 0.0782038793, blue: 0.35505265, alpha: 1)
             customDataCell.textContent?.font = UIFont(name: "Avenir Medium", size: 17.0)
-            print("bbbbb")
             cell = customDataCell
                 
         default:
@@ -92,11 +106,16 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Populate text here
-        // bioTextView
-        
-//        let size = CGSize(
-        
-        
+    }
+
+    @IBAction func swipeLeft(_ sender: Any) {
+        self.performSegue(withIdentifier: "swipeViewController", sender: self)
+        self.dismiss(animated: true) {
+            
+        }
+    }
+
+    @IBAction func swipeRight(_ sender: Any) {
+        print("yes")
     }
 }
