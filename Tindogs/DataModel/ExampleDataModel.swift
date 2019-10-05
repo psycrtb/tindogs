@@ -12,12 +12,12 @@ import Alamofire
 
 class ExampleDataModel {
     init() {
-//        let yoururl = URL(string: "http")!
-        
-        
-        AF.request(URL(string: "http://www.google.com")!).response { response in
-            print("response: \(response)")
-            
+        let yoururl = URL(string: "http://165.22.22.124/api/dogs")!
+
+        AF.request(yoururl).response { response in
+            print(response.debugDescription)
+//            print("response: \(String(response))")
+
         }
     }
 }

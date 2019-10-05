@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        DogsDataModel().getDogs()
         DogsDataModel().getDog(dog_id: "1")
 
-        
-        
-        
+
+
+
         return true
     }
 
