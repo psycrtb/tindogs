@@ -128,6 +128,7 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     @IBAction func pressedYes(_ sender: Any) {
+        iLikeThisDog(dogId: "\(firstDog.id)")
         requestNewDog(fromDirectionRight: false)
     }
     
@@ -139,10 +140,13 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     @IBAction func swipeRight(_ sender: Any) {
         // Perform data model update
-        
+        iLikeThisDog(dogId: "\(firstDog.id)")
         requestNewDog()
     }
     
+    func iLikeThisDog(dogId: String) {
+        DogsDataModel().sendInterest(dog_id: dogId)
+    }
     
     func requestNewDog(fromDirectionRight: Bool = true) {
         let sb = UIStoryboard(name: "Main", bundle: nil)

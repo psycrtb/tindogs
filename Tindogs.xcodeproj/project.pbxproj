@@ -15,9 +15,13 @@
 		A22C46822348923F00D19E96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22C46802348923F00D19E96 /* LaunchScreen.storyboard */; };
 		A22C468A234898AF00D19E96 /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22C4689234898AF00D19E96 /* SegueFromRight.swift */; };
 		A22C468C234899EC00D19E96 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22C468B234899EC00D19E96 /* SwipeViewController.swift */; };
-		A22ED4352348D8DC0001BBE4 /* ExampleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ED4342348D8DC0001BBE4 /* ExampleDataModel.swift */; };
-		A22ED43A2348E4160001BBE4 /* MasterSwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ED4392348E4160001BBE4 /* MasterSwipeViewController.swift */; };
 		A22ED43C2348EBA10001BBE4 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ED43B2348EBA10001BBE4 /* Dog.swift */; };
+		A22ED43F234913630001BBE4 /* MyDogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ED43E234913630001BBE4 /* MyDogsViewController.swift */; };
+		A22ED441234914600001BBE4 /* MyDogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ED440234914600001BBE4 /* MyDogTableViewCell.swift */; };
+		A22ED443234919E90001BBE4 /* InterestedPeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ED442234919E90001BBE4 /* InterestedPeopleTableViewCell.swift */; };
+		A22ED44523491A3A0001BBE4 /* MyDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ED44423491A3A0001BBE4 /* MyDogViewController.swift */; };
+		A22ED44723492BB80001BBE4 /* InterestedPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ED44623492BB80001BBE4 /* InterestedPeopleViewController.swift */; };
+		A22ED44923492FBC0001BBE4 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ED44823492FBC0001BBE4 /* People.swift */; };
 		A2669FD12348C51E00AFB253 /* TextCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2669FD02348C51E00AFB253 /* TextCellView.swift */; };
 		AA3ACDA02348DF8E0029C8B6 /* DogsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3ACD9F2348DF8E0029C8B6 /* DogsDataModel.swift */; };
 /* End PBXBuildFile section */
@@ -34,9 +38,13 @@
 		A22C46832348923F00D19E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A22C4689234898AF00D19E96 /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
 		A22C468B234899EC00D19E96 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
-		A22ED4342348D8DC0001BBE4 /* ExampleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDataModel.swift; sourceTree = "<group>"; };
-		A22ED4392348E4160001BBE4 /* MasterSwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterSwipeViewController.swift; sourceTree = "<group>"; };
 		A22ED43B2348EBA10001BBE4 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		A22ED43E234913630001BBE4 /* MyDogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDogsViewController.swift; sourceTree = "<group>"; };
+		A22ED440234914600001BBE4 /* MyDogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDogTableViewCell.swift; sourceTree = "<group>"; };
+		A22ED442234919E90001BBE4 /* InterestedPeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedPeopleTableViewCell.swift; sourceTree = "<group>"; };
+		A22ED44423491A3A0001BBE4 /* MyDogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDogViewController.swift; sourceTree = "<group>"; };
+		A22ED44623492BB80001BBE4 /* InterestedPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedPeopleViewController.swift; sourceTree = "<group>"; };
+		A22ED44823492FBC0001BBE4 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		A2669FD02348C51E00AFB253 /* TextCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCellView.swift; sourceTree = "<group>"; };
 		AA3ACD9F2348DF8E0029C8B6 /* DogsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsDataModel.swift; sourceTree = "<group>"; };
 		E20842EF22FF058E37E6386D /* Pods_Tindogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tindogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +100,7 @@
 		A22C46742348923E00D19E96 /* Tindogs */ = {
 			isa = PBXGroup;
 			children = (
+				A22ED43D234913510001BBE4 /* Shelter */,
 				A22ED4332348D8D10001BBE4 /* DataModel */,
 				A22C4689234898AF00D19E96 /* SegueFromRight.swift */,
 				A22C46752348923E00D19E96 /* AppDelegate.swift */,
@@ -102,7 +111,6 @@
 				A22C46832348923F00D19E96 /* Info.plist */,
 				A22C468B234899EC00D19E96 /* SwipeViewController.swift */,
 				A2669FD02348C51E00AFB253 /* TextCellView.swift */,
-				A22ED4392348E4160001BBE4 /* MasterSwipeViewController.swift */,
 			);
 			path = Tindogs;
 			sourceTree = "<group>";
@@ -110,11 +118,23 @@
 		A22ED4332348D8D10001BBE4 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				A22ED4342348D8DC0001BBE4 /* ExampleDataModel.swift */,
 				AA3ACD9F2348DF8E0029C8B6 /* DogsDataModel.swift */,
 				A22ED43B2348EBA10001BBE4 /* Dog.swift */,
+				A22ED44823492FBC0001BBE4 /* People.swift */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		A22ED43D234913510001BBE4 /* Shelter */ = {
+			isa = PBXGroup;
+			children = (
+				A22ED43E234913630001BBE4 /* MyDogsViewController.swift */,
+				A22ED440234914600001BBE4 /* MyDogTableViewCell.swift */,
+				A22ED442234919E90001BBE4 /* InterestedPeopleTableViewCell.swift */,
+				A22ED44423491A3A0001BBE4 /* MyDogViewController.swift */,
+				A22ED44623492BB80001BBE4 /* InterestedPeopleViewController.swift */,
+			);
+			path = Shelter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,15 +252,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A22ED43A2348E4160001BBE4 /* MasterSwipeViewController.swift in Sources */,
 				A22C467A2348923E00D19E96 /* ViewController.swift in Sources */,
 				A22C46762348923E00D19E96 /* AppDelegate.swift in Sources */,
-				A22ED4352348D8DC0001BBE4 /* ExampleDataModel.swift in Sources */,
+				A22ED443234919E90001BBE4 /* InterestedPeopleTableViewCell.swift in Sources */,
+				A22ED441234914600001BBE4 /* MyDogTableViewCell.swift in Sources */,
 				A22C468A234898AF00D19E96 /* SegueFromRight.swift in Sources */,
 				A22ED43C2348EBA10001BBE4 /* Dog.swift in Sources */,
+				A22ED44723492BB80001BBE4 /* InterestedPeopleViewController.swift in Sources */,
 				A22C468C234899EC00D19E96 /* SwipeViewController.swift in Sources */,
+				A22ED43F234913630001BBE4 /* MyDogsViewController.swift in Sources */,
 				A2669FD12348C51E00AFB253 /* TextCellView.swift in Sources */,
 				AA3ACDA02348DF8E0029C8B6 /* DogsDataModel.swift in Sources */,
+				A22ED44523491A3A0001BBE4 /* MyDogViewController.swift in Sources */,
+				A22ED44923492FBC0001BBE4 /* People.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,16 +11,20 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var myShelterDogs: [Dog] = []
+    var interestedPeople: [People] = []
+    var interestedPerson: People?
+    public var myShelterDogSelected: Dog? // Vomit
+    
     var window: UIWindow?
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-
         
-//        DogsDataModel().getDog(dog_id: "1") { dog in
-////            dog.age
-//        }
+        
+        DogsDataModel().hasShelterGotDogs() { dogs in
+            self.myShelterDogs = dogs
+        }
 
 
 

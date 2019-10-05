@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lookForDogButton: UIButton!
     
     var dogs: [Dog] = []
+    var myShelterDogs: [Dog] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
             
             
         }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -32,6 +34,11 @@ class ViewController: UIViewController {
             let vc = segue.destination as! SwipeViewController
             vc.dogs = dogs
         }
+//        else {
+//            let vc = segue.destination as! UINavigationController
+//            vc.dogs = dogs
+//        }
+        
     }
     
 //    override func performSegue(withIdentifier identifier: String, sender: Any?) {
