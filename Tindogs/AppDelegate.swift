@@ -16,12 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
         
-        // Test here please!!!! Max
-        DogsDataModel().getDogs() { dogs in
-            
-            
-        }
 //        DogsDataModel().getDog(dog_id: "1") { dog in
 ////            dog.age
 //        }

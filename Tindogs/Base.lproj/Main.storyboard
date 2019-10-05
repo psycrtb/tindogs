@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIj-NI-4XF">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIj-NI-4XF">
                                 <rect key="frame" x="20" y="334" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.95644575357437134" green="0.82755929231643677" blue="0.86955112218856812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -90,6 +90,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lookForDogButton" destination="dIj-NI-4XF" id="4wW-BX-2Zs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,35 +156,40 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aS-40-kd2">
                                 <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgi-bV-uXx">
-                                        <rect key="frame" x="20" y="0.0" width="44" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgi-bV-uXx">
+                                        <rect key="frame" x="15" y="0.0" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="hja-87-QY6"/>
+                                            <constraint firstAttribute="width" constant="50" id="3F2-C3-Sqh"/>
                                         </constraints>
-                                        <state key="normal" title="Reject">
+                                        <state key="normal" image="dislike">
                                             <color key="titleColor" red="0.82698744540000002" green="0.078203879300000001" blue="0.35505265000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="pressedNo:" destination="txo-12-tPs" eventType="touchUpInside" id="nuN-i8-KzR"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wm0-t0-upw">
-                                        <rect key="frame" x="345" y="0.0" width="49" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wm0-t0-upw">
+                                        <rect key="frame" x="349" y="0.0" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="3Xt-qQ-h5N"/>
+                                            <constraint firstAttribute="width" constant="50" id="7NQ-ry-lFy"/>
                                         </constraints>
-                                        <state key="normal" title="Accept">
+                                        <state key="normal" image="like">
                                             <color key="titleColor" red="0.82698744540000002" green="0.078203879300000001" blue="0.35505265000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="pressedYes:" destination="txo-12-tPs" eventType="touchUpInside" id="RaL-hk-HmJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Mgi-bV-uXx" firstAttribute="top" secondItem="8aS-40-kd2" secondAttribute="top" id="3ae-o6-Uux"/>
                                     <constraint firstAttribute="bottom" secondItem="Wm0-t0-upw" secondAttribute="bottom" id="4pB-jK-6Vn"/>
-                                    <constraint firstItem="Mgi-bV-uXx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8aS-40-kd2" secondAttribute="leading" symbolic="YES" id="GZV-KT-8bW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wm0-t0-upw" secondAttribute="trailing" constant="15" id="CVd-TU-nSt"/>
                                     <constraint firstAttribute="height" constant="50" id="Vgv-ig-R5F"/>
                                     <constraint firstAttribute="bottom" secondItem="Mgi-bV-uXx" secondAttribute="bottom" id="WMo-ID-1su"/>
+                                    <constraint firstItem="Mgi-bV-uXx" firstAttribute="leading" secondItem="8aS-40-kd2" secondAttribute="leading" constant="15" id="Wxy-Cy-ATc"/>
                                     <constraint firstItem="Wm0-t0-upw" firstAttribute="top" secondItem="8aS-40-kd2" secondAttribute="top" id="iTl-H0-qtN"/>
-                                    <constraint firstAttribute="trailing" secondItem="Wm0-t0-upw" secondAttribute="trailing" constant="20" id="kHO-h8-X1H"/>
-                                    <constraint firstItem="Wm0-t0-upw" firstAttribute="leading" secondItem="Mgi-bV-uXx" secondAttribute="trailing" constant="281" id="tc8-lv-Io7"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N2C-s2-lXZ">
@@ -272,6 +280,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="3qt-G0-ruW"/>
                     <connections>
+                        <outlet property="dogAge" destination="h7U-bb-Xef" id="EWo-tF-kiW"/>
+                        <outlet property="dogName" destination="7OZ-JE-U7B" id="0i5-hr-ggh"/>
                         <outlet property="tableView" destination="N2C-s2-lXZ" id="RCC-5e-b2b"/>
                     </connections>
                 </viewController>
@@ -307,6 +317,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dislike" width="100" height="100"/>
+        <image name="like" width="500" height="500"/>
         <image name="placeholder_profile_dog" width="1600" height="1200"/>
         <image name="tindogslogo" width="1000" height="254"/>
     </resources>

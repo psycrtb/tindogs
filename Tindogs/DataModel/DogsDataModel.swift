@@ -18,7 +18,6 @@ class DogsDataModel {
     
     func getDogs(completionHandler: @escaping ([Dog]) -> Void){
         AF.request(URL(string: DogsDataModel.api_base + "dogs")!).response { response in
-            print("response: \(response.debugDescription)")
             
             let jsonData = response.data! // response.data(encoding: .utf8)!
             let decoder = JSONDecoder()
@@ -34,7 +33,6 @@ class DogsDataModel {
         
     func getDog(dog_id: String, completionHandler: @escaping (Dog) -> Void) {
         AF.request(URL(string: DogsDataModel.api_base + "dogs/" + dog_id)!).response { response in
-            print("response: \(response.debugDescription)")
                    
             let jsonData = response.data! // response.data(encoding: .utf8)!
                 let decoder = JSONDecoder()
