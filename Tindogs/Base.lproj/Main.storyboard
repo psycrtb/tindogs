@@ -281,6 +281,7 @@
                     <navigationItem key="navigationItem" id="3qt-G0-ruW"/>
                     <connections>
                         <outlet property="dogAge" destination="h7U-bb-Xef" id="EWo-tF-kiW"/>
+                        <outlet property="dogImage" destination="ctU-t0-CK5" id="2hC-xY-swg"/>
                         <outlet property="dogName" destination="7OZ-JE-U7B" id="0i5-hr-ggh"/>
                         <outlet property="tableView" destination="N2C-s2-lXZ" id="RCC-5e-b2b"/>
                     </connections>

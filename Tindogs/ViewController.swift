@@ -22,6 +22,7 @@ class ViewController: UIViewController {
             self.dogs = dogs
             self.lookForDogButton.isEnabled = true
             
+            
         }
         // Do any additional setup after loading the view.
     }

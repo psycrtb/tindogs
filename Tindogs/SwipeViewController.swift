@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var dogName: UILabel!
     @IBOutlet weak var dogAge: UILabel!
-    
+    @IBOutlet weak var dogImage: UIImageView!
+
     var dogs: [Dog]!
     
     private var firstDog: Dog {
@@ -113,6 +115,8 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        dogImage.sd_setImage(with: URL(string: firstDog.photo), placeholderImage: UIImage(named: "placeholder.png"))
+
         dogName.text = firstDog.name
         dogAge.text = firstDog.age
         
