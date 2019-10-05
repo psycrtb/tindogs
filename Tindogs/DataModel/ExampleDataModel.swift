@@ -12,7 +12,7 @@ import Alamofire
 
 class ExampleDataModel {
     init() {
-        let yoururl = URL(string: "http")!
+//        let yoururl = URL(string: "http")!
         
         
         AF.request(URL(string: "http://www.google.com")!).response { response in
