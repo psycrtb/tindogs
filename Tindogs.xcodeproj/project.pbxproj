@@ -14,6 +14,7 @@
 		A22C46822348923F00D19E96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22C46802348923F00D19E96 /* LaunchScreen.storyboard */; };
 		A22C468A234898AF00D19E96 /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22C4689234898AF00D19E96 /* SegueFromRight.swift */; };
 		A22C468C234899EC00D19E96 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22C468B234899EC00D19E96 /* SwipeViewController.swift */; };
+		A2669FD12348C51E00AFB253 /* TextCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2669FD02348C51E00AFB253 /* TextCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A22C46832348923F00D19E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A22C4689234898AF00D19E96 /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
 		A22C468B234899EC00D19E96 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		A2669FD02348C51E00AFB253 /* TextCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				A22C46802348923F00D19E96 /* LaunchScreen.storyboard */,
 				A22C46832348923F00D19E96 /* Info.plist */,
 				A22C468B234899EC00D19E96 /* SwipeViewController.swift */,
+				A2669FD02348C51E00AFB253 /* TextCellView.swift */,
 			);
 			path = Tindogs;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				A22C46762348923E00D19E96 /* AppDelegate.swift in Sources */,
 				A22C468A234898AF00D19E96 /* SegueFromRight.swift in Sources */,
 				A22C468C234899EC00D19E96 /* SwipeViewController.swift in Sources */,
+				A2669FD12348C51E00AFB253 /* TextCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +303,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tindogs-woof.Tindogs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tindogs-woof.Tindogs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
