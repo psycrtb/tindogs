@@ -16,6 +16,7 @@
 		A22C468A234898AF00D19E96 /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22C4689234898AF00D19E96 /* SegueFromRight.swift */; };
 		A22C468C234899EC00D19E96 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22C468B234899EC00D19E96 /* SwipeViewController.swift */; };
 		A22ED4352348D8DC0001BBE4 /* ExampleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ED4342348D8DC0001BBE4 /* ExampleDataModel.swift */; };
+		A22ED43A2348E4160001BBE4 /* MasterSwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22ED4392348E4160001BBE4 /* MasterSwipeViewController.swift */; };
 		A2669FD12348C51E00AFB253 /* TextCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2669FD02348C51E00AFB253 /* TextCellView.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		A22C4689234898AF00D19E96 /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
 		A22C468B234899EC00D19E96 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		A22ED4342348D8DC0001BBE4 /* ExampleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDataModel.swift; sourceTree = "<group>"; };
+		A22ED4392348E4160001BBE4 /* MasterSwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterSwipeViewController.swift; sourceTree = "<group>"; };
 		A2669FD02348C51E00AFB253 /* TextCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCellView.swift; sourceTree = "<group>"; };
 		E20842EF22FF058E37E6386D /* Pods_Tindogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tindogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				A22C46832348923F00D19E96 /* Info.plist */,
 				A22C468B234899EC00D19E96 /* SwipeViewController.swift */,
 				A2669FD02348C51E00AFB253 /* TextCellView.swift */,
+				A22ED4392348E4160001BBE4 /* MasterSwipeViewController.swift */,
 			);
 			path = Tindogs;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22ED43A2348E4160001BBE4 /* MasterSwipeViewController.swift in Sources */,
 				A22C467A2348923E00D19E96 /* ViewController.swift in Sources */,
 				A22C46762348923E00D19E96 /* AppDelegate.swift in Sources */,
 				A22ED4352348D8DC0001BBE4 /* ExampleDataModel.swift in Sources */,

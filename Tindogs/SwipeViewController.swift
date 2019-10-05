@@ -10,10 +10,9 @@ import UIKit
 
 class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-//    var commonSegue: UIStoryboardSegue {
-//        
-//    }
-//    
+        
+       
+
     
     @IBOutlet weak var tableView: UITableView!
     let simpleFakeDataSourcePetFriendly: Bool = true
@@ -109,13 +108,31 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     @IBAction func swipeLeft(_ sender: Any) {
-        self.performSegue(withIdentifier: "swipeViewController", sender: self)
-        self.dismiss(animated: true) {
-            
-        }
+        // Perform data model update
+
+        requestNewDog(fromDirectionRight: false)
     }
 
     @IBAction func swipeRight(_ sender: Any) {
-        print("yes")
+        // Perform data model update
+        
+        requestNewDog()
+    }
+    
+    
+    func requestNewDog(fromDirectionRight: Bool = true) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "swipeViewController")
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = CATransitionType.push
+        if fromDirectionRight {
+            transition.subtype = CATransitionSubtype.fromRight
+        } else {
+            transition.subtype = CATransitionSubtype.fromLeft
+        }
+        transition.timingFunction = CAMediaTimingFunction(name: .easeIn)
+        self.view.window!.layer.add(transition, forKey: kCATransition)
+        self.present(vc, animated: false, completion: nil)//show(vc, sender: self)
     }
 }

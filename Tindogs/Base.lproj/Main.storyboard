@@ -27,7 +27,7 @@
                                     <color key="titleColor" red="0.82698744535446167" green="0.078203879296779633" blue="0.355052649974823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="txo-12-tPs" kind="custom" customClass="SegueFromRight" customModule="Tindogs" customModuleProvider="target" id="dV0-SO-Tzj"/>
+                                    <segue destination="txo-12-tPs" kind="custom" identifier="segueFromRight" destinationCreationSelector="segueFromRight" customClass="SegueFromRight" customModule="Tindogs" customModuleProvider="target" id="dV0-SO-Tzj"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tindogslogo" translatesAutoresizingMaskIntoConstraints="NO" id="tr2-83-liN">
@@ -55,6 +55,9 @@
                                 <state key="normal" title="I shelter dogs">
                                     <color key="titleColor" red="0.82698744540000002" green="0.078203879300000001" blue="0.35505265000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="WB1-72-vrk" kind="custom" customClass="SegueFromRight" customModule="Tindogs" customModuleProvider="target" id="LzX-GO-wkz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who are you?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOd-Hl-Wfm">
                                 <rect key="frame" x="20" y="293" width="374" height="21"/>
@@ -270,7 +273,6 @@
                     <navigationItem key="navigationItem" id="3qt-G0-ruW"/>
                     <connections>
                         <outlet property="tableView" destination="N2C-s2-lXZ" id="RCC-5e-b2b"/>
-                        <segue destination="WB1-72-vrk" kind="custom" id="8yn-NM-3Yp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5w1-i5-6Qx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -287,20 +289,21 @@
             </objects>
             <point key="canvasLocation" x="1189.8550724637682" y="-222.32142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Master Swipe View Controller-->
         <scene sceneID="KUU-Af-pA4">
             <objects>
-                <viewController id="WB1-72-vrk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="masterSwipeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WB1-72-vrk" customClass="MasterSwipeViewController" customModule="Tindogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TLm-j5-WdN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rZ7-2z-Yrf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="y9N-xz-uwo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0E0-ub-3lL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1991" y="-227"/>
+            <point key="canvasLocation" x="2041" y="251"/>
         </scene>
     </scenes>
     <resources>
