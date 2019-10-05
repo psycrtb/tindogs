@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Test here please!!!! Max
 //        DogsDataModel().getDogs()
-        DogsDataModel().getDog(dog_id: "1")
+        DogsDataModel().getDog(dog_id: "1") { dog in
+//            dog.age
+        }
 
 
 
