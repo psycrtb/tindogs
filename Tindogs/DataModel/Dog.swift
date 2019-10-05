@@ -14,3 +14,7 @@ struct Dog: Codable {
     let age: String
     let breed: String
 }
+
+struct Dogs: Codable {
+    let dogs: [Dog]
+}

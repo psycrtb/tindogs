@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Test here please!!!! Max
-//        DogsDataModel().getDogs()
+        DogsDataModel().getDogs(){dogs in}
         DogsDataModel().getDog(dog_id: "1") { dog in
 //            dog.age
         }
