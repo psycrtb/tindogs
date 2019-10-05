@@ -16,14 +16,14 @@ class DogsDataModel {
 
     }
     
-    func getDogs(completionHandler: @escaping (Dogs) -> Void){
+    func getDogs(completionHandler: @escaping ([Dog]) -> Void){
         AF.request(URL(string: DogsDataModel.api_base + "dogs")!).response { response in
             print("response: \(response.debugDescription)")
             
             let jsonData = response.data! // response.data(encoding: .utf8)!
             let decoder = JSONDecoder()
             do {
-                let dogs = try decoder.decode(Dogs.self, from: jsonData)
+                let dogs = try decoder.decode(Array<Dog>.self, from: jsonData)
                 completionHandler(dogs)
             } catch {
                 print("we don screwed up")

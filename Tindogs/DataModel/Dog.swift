@@ -13,8 +13,10 @@ struct Dog: Codable {
     let name: String
     let age: String
     let breed: String
-}
-
-struct Dogs: Codable {
-    let dogs: [Dog]
+    let color: String
+    let origin: String
+    let description: String
+    let photo: String
+    let created_at: String
+    let updated_at: String    
 }
