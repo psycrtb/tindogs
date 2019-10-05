@@ -127,9 +127,9 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
         transition.duration = 0.3
         transition.type = CATransitionType.push
         if fromDirectionRight {
-            transition.subtype = CATransitionSubtype.fromRight
-        } else {
             transition.subtype = CATransitionSubtype.fromLeft
+        } else {
+            transition.subtype = CATransitionSubtype.fromRight
         }
         transition.timingFunction = CAMediaTimingFunction(name: .easeIn)
         self.view.window!.layer.add(transition, forKey: kCATransition)
