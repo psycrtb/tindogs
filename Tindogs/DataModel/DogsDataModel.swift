@@ -24,8 +24,6 @@ class DogsDataModel {
             do {
                 let people = try decoder.decode(Array<People>.self, from: jsonData)
                 completionHandler(people)
-//                let dogs = try decoder.decode(Array<Dog>.self, from: jsonData)
-//                completionHandler(dogs)
             } catch {
                 print("interestedPeople screwed up")
             }

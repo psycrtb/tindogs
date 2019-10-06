@@ -18,5 +18,7 @@ struct Dog: Codable {
     let description: String
     let photo: String
     let created_at: String
-    let updated_at: String    
+    let updated_at: String
+    let family_friendly: String
+    let pet_friendly: String
 }

@@ -15,6 +15,8 @@ class InterestedPeopleViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet weak var personName: UILabel!
     var interestedPerson: People?
     
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -23,16 +25,43 @@ class InterestedPeopleViewController: UIViewController, UITableViewDelegate, UIT
         personName.text = interestedPerson?.name
         personPhoto.sd_setImage(with: URL(string: interestedPerson!.photo), placeholderImage: UIImage(named: "placeholder.png"))
         super.viewDidLoad()
+        print("person:\(String(describing: interestedPerson))")
+        tableView.reloadData()
     }
     
-//    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//    appDelegate.myShelterDogSelected = dogs[indexPath.row]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 3
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 1:
+            return 60.0
+        case 2:
+            return 100.0
+        default:
+            return 43.5
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        switch indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "standardCell") as! StandardTableViewCell
+            cell.textLabelArea.text = "Phone: \(String(interestedPerson!.phone))"
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "largeTextCell") as! LargeTextCell
+            cell.textArea.text = "Address: \(String(interestedPerson!.address))"
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "largeTextCell") as! LargeTextCell
+            cell.textArea.text = interestedPerson!.biography
+            return cell
+            
+        default:
+            return UITableViewCell()
+        }
     }
     
     @IBAction func rejectPressed(_ sender: Any) {

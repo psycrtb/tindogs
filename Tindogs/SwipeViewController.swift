@@ -13,7 +13,11 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var dogName: UILabel!
     @IBOutlet weak var dogAge: UILabel!
     @IBOutlet weak var dogImage: UIImageView!
-
+    @IBOutlet weak var superSecretHiddenBackButton: UIButton!
+    @IBAction func superSecretHiddenBackButtonPress(_ sender: Any) {
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     var dogs: [Dog]!
     
     private var firstDog: Dog {
@@ -27,10 +31,10 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     @IBOutlet weak var tableView: UITableView!
-    let simpleFakeDataSourcePetFriendly: Bool = true
+//    let simpleFakeDataSourcePetFriendly: Bool = true
 //    let simpleFakeDataSourceBreed: String = "Labrador"
 //    let simpleFakeDataSourceOrigin: String = "Austria"
-    let simpleFakeDataSourceFamilyFriendly: Bool = false
+//    let simpleFakeDataSourceFamilyFriendly: Bool = false
 //    let simpleFakeDataSourceBio: String = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
 
     
@@ -48,13 +52,13 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
         case 4:
             return 350.0
         case 2:
-            if simpleFakeDataSourcePetFriendly {
+            if firstDog.pet_friendly == "1" {
                 return 43.5
             }
             return 0
             
         case 3:
-            if simpleFakeDataSourceFamilyFriendly {
+            if firstDog.family_friendly == "1" {
                 return 43.5
             }
             return 0
@@ -75,11 +79,20 @@ class SwipeViewController: UIViewController, UITableViewDataSource, UITableViewD
         case 2:
             cell = UITableViewCell(style: .default, reuseIdentifier: SwipeViewController.selectionCell)
             cell.textLabel?.text = "Pet friendly"
-            cell.accessoryType =  simpleFakeDataSourcePetFriendly ? .checkmark : .none
+            if firstDog.pet_friendly == "1" {
+                cell.accessoryType =  .checkmark
+            } else {
+                cell.accessoryType = .none
+            }
         case 3:
             cell = UITableViewCell(style: .default, reuseIdentifier: SwipeViewController.selectionCell)
             cell.textLabel?.text = "Family friendly"
-            cell.accessoryType =  simpleFakeDataSourceFamilyFriendly ? .checkmark : .none
+            if firstDog.family_friendly == "1" {
+                cell.accessoryType =  .checkmark
+            } else {
+                cell.accessoryType = .none
+            }
+            
         case 4:
             let customDataCell = tableView.dequeueReusableCell(withIdentifier: SwipeViewController.textCell)
              as! TextCellView
